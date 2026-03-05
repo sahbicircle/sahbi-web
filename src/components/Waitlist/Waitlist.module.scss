@@ -55,32 +55,124 @@ h2 {
   flex-direction: column;
   gap: 16px;
   align-items: stretch;
-  max-width: 400px;
+  max-width: 480px;
   margin: 0 auto;
 }
 
-.inputWrap {
+.phoneRow {
+  display: flex;
+  gap: 12px;
+}
+
+.prefixWrap {
   position: relative;
+  flex-shrink: 0;
 }
 
-.inputIcon {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--text-muted);
-  pointer-events: none;
-}
-
-input {
-  width: 100%;
-  padding: 18px 20px 18px 52px;
+.prefixSelect {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 120px;
+  padding: 0 14px;
+  height: 56px;
   font-size: 1rem;
   border: 2px solid var(--border);
   border-radius: 14px;
-  background: var(--bg-card);
+  background: var(--bg-card) !important;
   color: var(--text-primary);
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+}
+
+.flag {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+  margin-left: auto;
+}
+
+.prefixDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px var(--shadow-strong);
+  max-height: 280px;
+  overflow-y: auto;
+  z-index: 10;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.2s;
+
+    &:hover,
+    &.selected {
+      background: var(--accent-soft);
+    }
+  }
+}
+
+.countryName {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.inputWrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-card);
   transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+  }
+}
+
+.inputIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  color: var(--text-muted);
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 18px 20px 18px 0;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: var(--text-primary);
 
   &::placeholder {
     color: var(--text-muted);
@@ -88,8 +180,6 @@ input {
 
   &:focus {
     outline: none;
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-soft);
   }
 }
 
@@ -121,11 +211,20 @@ button {
   border-radius: 16px;
 }
 
-body[dir="rtl"] .inputIcon {
-  left: auto;
-  right: 20px;
+body[dir="rtl"] .inputWrap {
+  flex-direction: row-reverse;
 }
 
 body[dir="rtl"] input {
-  padding: 18px 52px 18px 20px;
+  padding: 18px 0 18px 20px;
+}
+
+@media (max-width: 480px) {
+  .phoneRow {
+    flex-direction: column;
+  }
+
+  .prefixSelect {
+    width: 100%;
+  }
 }

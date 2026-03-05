@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  font-family: "DM Sans", "Inter", system-ui, sans-serif;
+  font-family: "Poppins", "Inter", system-ui, sans-serif;
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
@@ -54,7 +54,7 @@ body {
 }
 
 body[dir="rtl"] {
-  font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", "DM Sans", sans-serif;
+  font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Poppins", sans-serif;
 }
 
 .container {
