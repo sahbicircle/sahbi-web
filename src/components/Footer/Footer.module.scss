@@ -1,0 +1,38 @@
+.footer {
+  padding: 48px 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.logoDot {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.rights {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}

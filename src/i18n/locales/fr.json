@@ -1,0 +1,131 @@
+{
+  "theme": {
+    "light": "Clair",
+    "dark": "Sombre",
+    "system": "Système"
+  },
+  "nav": {
+    "concept": "Concept",
+    "pricing": "Tarifs",
+    "features": "Fonctionnalités",
+    "waitlist": "Liste d'attente",
+    "privacy": "Confidentialité",
+    "joinWaitlist": "Rejoindre la beta"
+  },
+  "hero": {
+    "slogan": "Rencontres réelles, souvenirs authentiques.",
+    "subtitle": "Sahbi organise des rencontres de groupe dans les meilleurs restaurants de Marrakech. Pas de swipe. On se rencontre d'abord, on discute ensuite.",
+    "cta": "Rejoindre la beta",
+    "first100": "Premiers 100 gratuits"
+  },
+  "concept": {
+    "title": "Le Concept",
+    "subtitle": "L'anti-swipe qui remet l'humain au centre",
+    "promise": "Fini les discussions virtuelles interminables. On se rencontre d'abord, on discute ensuite.",
+    "experience": "Des groupes curés par algorithme (centres d'intérêts, âge) se retrouvent dans des restaurants partenaires pour partager un repas.",
+    "meaning": "Sahbi signifie « mon ami » ou « mon compagnon » en arabe."
+  },
+  "pricing": {
+    "title": "Nos Offres",
+    "subtitle": "Un abonnement pour des rencontres authentiques",
+    "popular": "Populaire",
+    "standard": {
+      "name": "Sahbi Day",
+      "price": "59",
+      "currency": "DHS/mois",
+      "tagline": "Le Brunch du Dimanche",
+      "features": [
+        "5 inconnus autour d'une table",
+        "Mixité aléatoire ou thématique",
+        "Socialisation & réseautage",
+        "Repas réglé au restaurant"
+      ]
+    },
+    "premium": {
+      "name": "Sahbi Night",
+      "price": "199",
+      "currency": "DHS/mois",
+      "tagline": "Soirées exclusives",
+      "features": [
+        "Tout l'abonnement Standard",
+        "Vendredi : Girls Night Out",
+        "Samedi : Single & Ready",
+        "Groupes de 6 (parité H/F)"
+      ]
+    }
+  },
+  "features": {
+    "title": "L'Expérience Sahbi",
+    "subtitle": "Avant, pendant et après la rencontre",
+    "onboarding": {
+      "title": "Profil & Onboarding",
+      "desc": "Photos, bio, âge, profession et intérêts pour un matching personnalisé."
+    },
+    "booking": {
+      "title": "Réservation intuitive",
+      "desc": "Ville, type de cuisine, gamme de prix. Le lieu est confirmé 24h avant, les participants restent secrets."
+    },
+    "unlock": {
+      "title": "Le Déverrouillage",
+      "desc": "Présence détectée (géolocalisation ou QR). Les profils se révèlent après le repas."
+    },
+    "chat": {
+      "title": "Chat de groupe",
+      "desc": "S'ouvre automatiquement après le repas pour continuer à échanger, partager des photos ou organiser une autre sortie."
+    },
+    "trust": {
+      "title": "Trust Score",
+      "desc": "Notation 1 à 5 : ponctualité, politesse, convivialité. Une communauté de qualité."
+    }
+  },
+  "waitlist": {
+    "title": "Liste d'attente Marrakech",
+    "subtitle": "Les 100 premiers inscrits auront accès à l'application gratuitement pendant la beta.",
+    "placeholder": "Votre numéro de téléphone",
+    "submit": "Rejoindre",
+    "success": "Merci ! Vous faites partie des 100 premiers. Nous vous contacterons pour la beta."
+  },
+  "launch": {
+    "title": "Lancement Mars 2026",
+    "city": "Marrakech",
+    "subtitle": "Ville pilote : Guéliz, Hivernage, Médina"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "intro": "Sahbi (« nous », « notre ») s'engage à protéger vos données personnelles. Cette politique explique comment nous collectons, utilisons et protégeons vos informations.",
+    "collect": {
+      "title": "Données collectées",
+      "items": [
+        "Numéro de téléphone et identifiants de connexion",
+        "Photos, bio, âge, profession et centres d'intérêt",
+        "Données de géolocalisation (uniquement lors des rencontres)",
+        "Données de paiement (abonnement)"
+      ]
+    },
+    "use": {
+      "title": "Utilisation des données",
+      "items": [
+        "Organisation des rencontres et matching par algorithme",
+        "Communication avec les participants et partenaires",
+        "Amélioration du service et de l'expérience utilisateur",
+        "Respect des obligations légales"
+      ]
+    },
+    "share": {
+      "title": "Partage des données",
+      "text": "Nous ne vendons jamais vos données à des tiers. Les informations partagées avec les restaurants partenaires sont limitées au strict nécessaire pour la réservation."
+    },
+    "rights": {
+      "title": "Vos droits",
+      "text": "Vous pouvez à tout moment demander l'accès, la rectification ou la suppression de vos données. Contactez-nous pour exercer vos droits."
+    },
+    "contact": {
+      "title": "Contact",
+      "text": "Pour toute question : contact@sahbi.app"
+    }
+  },
+  "footer": {
+    "tagline": "Rencontres réelles, souvenirs authentiques.",
+    "rights": "© 2026 Sahbi. Tous droits réservés."
+  }
+}
