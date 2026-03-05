@@ -1,12 +1,34 @@
 .concept {
   padding: 120px 0;
   background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: var(--accent-soft);
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: conceptFloat 15s ease-in-out infinite;
+  }
+}
+
+@keyframes conceptFloat {
+  0%, 100% { transform: translate(0, 0); opacity: 0.4; }
+  50% { transform: translate(-30px, 20px); opacity: 0.6; }
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .header {

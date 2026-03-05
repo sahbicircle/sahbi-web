@@ -9,6 +9,11 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.bgPattern} aria-hidden="true" />
+      <div className={styles.bgOrbs} aria-hidden="true">
+        <span className={styles.orb1} />
+        <span className={styles.orb2} />
+        <span className={styles.orb3} />
+      </div>
       <div className={styles.container}>
         <motion.div
           className={styles.content}

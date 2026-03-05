@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../../contexts/ThemeContext";
 import { Sun, Moon, Monitor, Globe, Menu, X } from "lucide-react";
@@ -13,6 +14,8 @@ const LANGUAGES = [
 export default function Navbar() {
   const { t, i18n } = useTranslation();
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
+  const isHome = location.pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [themeOpen, setThemeOpen] = useState(false);
@@ -22,26 +25,51 @@ export default function Navbar() {
   return (
     <header className={styles.navbar}>
       <div className={styles.container}>
-        <a href="#" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           Sahb<span className={styles.logoDot}>i</span>
-        </a>
+        </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
-          <a href="#concept" onClick={() => setMenuOpen(false)}>
-            {t("nav.concept")}
-          </a>
-          <a href="#pricing" onClick={() => setMenuOpen(false)}>
-            {t("nav.pricing")}
-          </a>
-          <a href="#features" onClick={() => setMenuOpen(false)}>
-            {t("nav.features")}
-          </a>
-          <a href="#waitlist" onClick={() => setMenuOpen(false)}>
-            {t("nav.waitlist")}
-          </a>
-          <a href="#privacy" onClick={() => setMenuOpen(false)}>
-            {t("nav.privacy")}
-          </a>
+          {isHome ? (
+            <>
+              <a href="#concept" onClick={() => setMenuOpen(false)}>
+                {t("nav.concept")}
+              </a>
+              <a href="#pricing" onClick={() => setMenuOpen(false)}>
+                {t("nav.pricing")}
+              </a>
+              <a href="#features" onClick={() => setMenuOpen(false)}>
+                {t("nav.features")}
+              </a>
+              <a href="#waitlist" onClick={() => setMenuOpen(false)}>
+                {t("nav.waitlist")}
+              </a>
+              <a href="#faq" onClick={() => setMenuOpen(false)}>
+                {t("nav.faq")}
+              </a>
+              <Link to="/privacy" onClick={() => setMenuOpen(false)}>
+                {t("nav.privacy")}
+              </Link>
+              <Link to="/terms" onClick={() => setMenuOpen(false)}>
+                {t("nav.terms")}
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to="/#concept" onClick={() => setMenuOpen(false)}>
+                {t("nav.concept")}
+              </Link>
+              <Link to="/#waitlist" onClick={() => setMenuOpen(false)}>
+                {t("nav.waitlist")}
+              </Link>
+              <Link to="/privacy" onClick={() => setMenuOpen(false)}>
+                {t("nav.privacy")}
+              </Link>
+              <Link to="/terms" onClick={() => setMenuOpen(false)}>
+                {t("nav.terms")}
+              </Link>
+            </>
+          )}
 
           <div className={styles.actions}>
             <div className={styles.dropdown}>
@@ -104,13 +132,15 @@ export default function Navbar() {
               )}
             </div>
 
-            <a
-              href="#waitlist"
-              className={styles.cta}
-              onClick={() => setMenuOpen(false)}
-            >
-              {t("nav.joinWaitlist")}
-            </a>
+            {isHome ? (
+              <a href="#waitlist" className={styles.cta} onClick={() => setMenuOpen(false)}>
+                {t("nav.joinWaitlist")}
+              </a>
+            ) : (
+              <Link to="/#waitlist" className={styles.cta} onClick={() => setMenuOpen(false)}>
+                {t("nav.joinWaitlist")}
+              </Link>
+            )}
           </div>
         </nav>
 

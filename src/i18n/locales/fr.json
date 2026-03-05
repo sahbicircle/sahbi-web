@@ -9,8 +9,11 @@
     "pricing": "Tarifs",
     "features": "Fonctionnalités",
     "waitlist": "Liste d'attente",
+    "faq": "FAQ",
     "privacy": "Confidentialité",
-    "joinWaitlist": "Rejoindre la beta"
+    "terms": "Conditions",
+    "joinWaitlist": "Rejoindre la beta",
+    "back": "Retour"
   },
   "hero": {
     "slogan": "Rencontres réelles, souvenirs authentiques.",
@@ -122,7 +125,80 @@
     "contact": {
       "title": "Contact",
       "text": "Pour toute question : contact@sahbi.app"
+    },
+    "updated": "Dernière mise à jour : Mars 2025"
+  },
+  "terms": {
+    "title": "Conditions d'utilisation",
+    "intro": "En utilisant Sahbi, vous acceptez les présentes conditions. Veuillez les lire attentivement.",
+    "updated": "Dernière mise à jour : Mars 2025",
+    "sections": {
+      "1": {
+        "title": "1. Acceptation des conditions",
+        "content": "L'accès et l'utilisation de l'application Sahbi impliquent l'acceptation pleine et entière des présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre service."
+      },
+      "2": {
+        "title": "2. Description du service",
+        "content": "Sahbi est une application de rencontres de groupe qui organise des repas dans des restaurants partenaires. Le service comprend la mise en relation, la réservation et les fonctionnalités de communication post-rencontre."
+      },
+      "3": {
+        "title": "3. Inscription et compte",
+        "content": "Pour utiliser Sahbi, vous devez créer un compte avec des informations exactes. Vous êtes responsable de la confidentialité de vos identifiants. Les comptes sont personnels et non transférables."
+      },
+      "4": {
+        "title": "4. Comportement et respect",
+        "content": "Vous vous engagez à adopter un comportement respectueux lors des rencontres. Tout comportement inapproprié, harcèlement ou manque de ponctualité peut entraîner une suspension ou une exclusion du service."
+      },
+      "5": {
+        "title": "5. Abonnement et paiement",
+        "content": "L'abonnement Sahbi Day (59 DHS/mois) et Sahbi Night (199 DHS/mois) donne accès aux rencontres. Le repas est réglé directement au restaurant. Les abonnements sont renouvelés automatiquement sauf résiliation."
+      },
+      "6": {
+        "title": "6. Annulation et remboursement",
+        "content": "Les annulations doivent être effectuées au moins 24h avant l'événement. En cas de non-présentation répétée, votre compte pourra être suspendu. Les remboursements sont traités selon notre politique en vigueur."
+      },
+      "7": {
+        "title": "7. Modifications",
+        "content": "Sahbi se réserve le droit de modifier ces conditions. Les utilisateurs seront informés des changements importants. La poursuite de l'utilisation après modification vaut acceptation."
+      }
     }
+  },
+  "countdown": {
+    "title": "Lancement dans",
+    "subtitle": "L'application mobile Sahbi arrive en Mars 2026 à Marrakech",
+    "days": "Jours",
+    "hours": "Heures",
+    "minutes": "Minutes",
+    "seconds": "Secondes",
+    "launched": "L'application est lancée !"
+  },
+  "slides": {
+    "title": "L'expérience Sahbi en images"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur Sahbi",
+    "q1": "Comment fonctionne Sahbi ?",
+    "a1": "Sahbi organise des rencontres de groupe dans des restaurants partenaires. Vous réservez un créneau (brunch dimanche ou soirée weekend), et notre algorithme vous met en relation avec 5 à 6 personnes partageant vos centres d'intérêt. Le lieu est révélé 24h avant, les participants restent secrets jusqu'à la fin du repas.",
+    "q2": "Quelle est la différence entre Sahbi Day et Sahbi Night ?",
+    "a2": "Sahbi Day (59 DHS/mois) donne accès aux brunchs du dimanche avec 5 personnes. Sahbi Night (199 DHS/mois) inclut tout Sahbi Day plus les soirées exclusives : Girls Night Out le vendredi et Single & Ready le samedi avec des groupes de 6 personnes.",
+    "q3": "Comment sont choisis les participants ?",
+    "a3": "Notre algorithme de matching prend en compte vos centres d'intérêt, votre âge et vos préférences pour former des groupes équilibrés et favoriser les échanges naturels. La mixité et la parité sont des critères importants.",
+    "q4": "Le repas est-il inclus dans l'abonnement ?",
+    "a4": "Non. L'abonnement couvre la mise en relation et l'accès au service. Vous réglez votre repas directement au restaurant partenaire selon la carte du lieu.",
+    "q5": "Que se passe-t-il si je ne peux pas venir ?",
+    "a5": "Vous pouvez annuler jusqu'à 24h avant l'événement depuis l'application. Des annulations répétées ou des absences non signalées peuvent affecter votre Trust Score et l'accès au service.",
+    "q6": "Sahbi est-il disponible dans d'autres villes ?",
+    "a6": "Marrakech est notre ville pilote pour le lancement en Mars 2026. L'expansion vers d'autres villes du Maroc est prévue selon le succès du lancement."
+  },
+  "feedback": {
+    "title": "Votre avis compte",
+    "subtitle": "Partagez vos idées et suggestions pour améliorer Sahbi",
+    "name": "Votre nom",
+    "email": "Votre email",
+    "message": "Votre message ou suggestion...",
+    "submit": "Envoyer",
+    "success": "Merci pour votre retour ! Nous prenons en compte chaque suggestion."
   },
   "footer": {
     "tagline": "Rencontres réelles, souvenirs authentiques.",

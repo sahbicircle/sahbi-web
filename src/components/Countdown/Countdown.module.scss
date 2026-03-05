@@ -1,0 +1,139 @@
+.countdown {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgOrbs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .orb1 {
+    width: 200px;
+    height: 200px;
+    background: var(--accent);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .orb2 {
+    width: 150px;
+    height: 150px;
+    background: #84a8d8;
+    top: 60%;
+    right: 15%;
+    animation-delay: -3s;
+  }
+
+  .orb3 {
+    width: 120px;
+    height: 120px;
+    background: #51528e;
+    bottom: 20%;
+    left: 30%;
+    animation-delay: -5s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, -20px) scale(1.05);
+  }
+  66% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.icon {
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.units {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.unit {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px 32px;
+  min-width: 100px;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: var(--btn-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.label {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.separator {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.launchMsg {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  padding: 40px;
+}

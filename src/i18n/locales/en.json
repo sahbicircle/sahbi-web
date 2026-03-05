@@ -9,8 +9,11 @@
     "pricing": "Pricing",
     "features": "Features",
     "waitlist": "Waitlist",
+    "faq": "FAQ",
     "privacy": "Privacy",
-    "joinWaitlist": "Join Beta"
+    "terms": "Terms",
+    "joinWaitlist": "Join Beta",
+    "back": "Back"
   },
   "hero": {
     "slogan": "Real encounters, authentic memories.",
@@ -122,7 +125,49 @@
     "contact": {
       "title": "Contact",
       "text": "For any questions: contact@sahbi.app"
+    },
+    "updated": "Last updated: March 2025"
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "intro": "By using Sahbi, you accept these terms. Please read them carefully.",
+    "updated": "Last updated: March 2025",
+    "sections": {
+      "1": { "title": "1. Acceptance of terms", "content": "Access to and use of Sahbi implies full acceptance of these terms. If you do not accept them, please do not use our service." },
+      "2": { "title": "2. Service description", "content": "Sahbi is a group meetup app that organizes meals in partner restaurants. The service includes matching, booking and post-meetup communication features." },
+      "3": { "title": "3. Registration and account", "content": "To use Sahbi, you must create an account with accurate information. You are responsible for keeping your credentials confidential. Accounts are personal and non-transferable." },
+      "4": { "title": "4. Behavior and respect", "content": "You agree to behave respectfully during meetups. Any inappropriate behavior, harassment or lack of punctuality may result in suspension or exclusion from the service." },
+      "5": { "title": "5. Subscription and payment", "content": "Sahbi Day (59 MAD/month) and Sahbi Night (199 MAD/month) subscriptions give access to meetups. The meal is paid directly at the restaurant. Subscriptions renew automatically unless cancelled." },
+      "6": { "title": "6. Cancellation and refund", "content": "Cancellations must be made at least 24h before the event. Repeated no-shows may result in account suspension. Refunds are processed according to our policy." },
+      "7": { "title": "7. Modifications", "content": "Sahbi reserves the right to modify these terms. Users will be informed of significant changes. Continued use after modification constitutes acceptance." }
     }
+  },
+  "countdown": { "title": "Launch in", "subtitle": "Sahbi mobile app arrives March 2026 in Marrakech", "days": "Days", "hours": "Hours", "minutes": "Minutes", "seconds": "Seconds", "launched": "The app is launched!" },
+  "slides": { "title": "The Sahbi experience in pictures" },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about Sahbi",
+    "q1": "How does Sahbi work?",
+    "a1": "Sahbi organizes group meetups in partner restaurants. You book a slot (Sunday brunch or weekend evening), and our algorithm matches you with 5-6 people sharing your interests. The venue is revealed 24h before, participants stay secret until the end of the meal.",
+    "q2": "What's the difference between Sahbi Day and Sahbi Night?",
+    "a2": "Sahbi Day (59 MAD/month) gives access to Sunday brunches with 5 people. Sahbi Night (199 MAD/month) includes everything in Sahbi Day plus exclusive evenings: Girls Night Out on Friday and Single & Ready on Saturday with groups of 6.",
+    "q3": "How are participants selected?",
+    "a3": "Our matching algorithm considers your interests, age and preferences to form balanced groups and foster natural exchanges. Diversity and parity are important criteria.",
+    "q4": "Is the meal included in the subscription?",
+    "a4": "No. The subscription covers matching and service access. You pay for your meal directly at the partner restaurant according to the menu.",
+    "q5": "What if I can't make it?",
+    "a5": "You can cancel up to 24h before the event from the app. Repeated cancellations or unexcused absences may affect your Trust Score and service access.",
+    "q6": "Is Sahbi available in other cities?",
+    "a6": "Marrakech is our pilot city for the March 2026 launch. Expansion to other Moroccan cities is planned based on launch success."
+  },
+  "feedback": {
+    "title": "Your opinion matters",
+    "subtitle": "Share your ideas and suggestions to improve Sahbi",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message or suggestion...",
+    "submit": "Send",
+    "success": "Thank you for your feedback! We take every suggestion into account."
   },
   "footer": {
     "tagline": "Real encounters, authentic memories.",

@@ -28,7 +28,24 @@
 .tagline {
   font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+}
+
+.links {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+
+  a {
+    color: var(--accent);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.sep {
+  margin: 0 8px;
+  color: var(--text-muted);
 }
 
 .rights {

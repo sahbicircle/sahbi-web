@@ -1,28 +1,34 @@
+import { useEffect } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useRTL } from "./hooks/useRTL";
-import Navbar from "./components/NavBar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Concept from "./components/Concept/Concept";
-import Pricing from "./components/Pricing/Pricing";
-import Features from "./components/Features/Features";
-import Waitlist from "./components/Waitlist/Waitlist";
-import Privacy from "./components/Privacy/Privacy";
-import Footer from "./components/Footer/Footer";
+import HomePage from "./pages/HomePage";
+import PrivacyPage from "./pages/PrivacyPage";
+import TermsPage from "./pages/TermsPage";
+
+function ScrollToTop() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (hash) {
+      const el = document.getElementById(hash.slice(1));
+      el?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+  return null;
+}
 
 export default function App() {
   useRTL();
 
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <Concept />
-        <Pricing />
-        <Features />
-        <Waitlist />
-        <Privacy />
-      </main>
-      <Footer />
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
+      <Route path="/terms" element={<TermsPage />} />
+      </Routes>
     </>
   );
 }
