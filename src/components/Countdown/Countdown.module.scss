@@ -1,5 +1,5 @@
 .countdown {
-  padding: 80px 0;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
@@ -12,49 +12,43 @@
   span {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: float 8s ease-in-out infinite;
+    filter: blur(100px);
+    opacity: 0.5;
+    animation: float 6s ease-in-out infinite;
   }
 
   .orb1 {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     background: var(--accent);
-    top: 10%;
-    left: 10%;
+    top: 5%;
+    left: 5%;
     animation-delay: 0s;
   }
 
   .orb2 {
-    width: 150px;
-    height: 150px;
-    background: #84a8d8;
-    top: 60%;
-    right: 15%;
-    animation-delay: -3s;
+    width: 200px;
+    height: 200px;
+    background: var(--accent-violet);
+    top: 55%;
+    right: 10%;
+    animation-delay: -2s;
   }
 
   .orb3 {
-    width: 120px;
-    height: 120px;
-    background: #51528e;
-    bottom: 20%;
-    left: 30%;
-    animation-delay: -5s;
+    width: 160px;
+    height: 160px;
+    background: var(--accent-orange);
+    bottom: 15%;
+    left: 35%;
+    animation-delay: -4s;
   }
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(20px, -20px) scale(1.05);
-  }
-  66% {
-    transform: translate(-15px, 15px) scale(0.95);
-  }
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(25px, -25px) scale(1.08); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
 }
 
 .container {
@@ -67,73 +61,106 @@
 
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .icon {
   color: var(--accent);
   margin-bottom: 16px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(2rem, 4vw, 2.75rem);
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .units {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .unit {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 24px 32px;
-  min-width: 100px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 36px;
+  min-width: 110px;
   text-align: center;
-  box-shadow: 0 4px 20px var(--shadow);
+  box-shadow: 0 8px 32px var(--shadow);
+  transition: transform 0.2s;
+  animation: unitPulse 1s ease-in-out;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 12px 40px var(--shadow-strong);
+  }
+}
+
+@keyframes unitPulse {
+  0% { transform: scale(0.95); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
 }
 
 .value {
   display: block;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3.2rem;
+  font-weight: 800;
   background: var(--btn-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 .label {
-  margin-top: 4px;
-  font-size: 0.85rem;
+  margin-top: 8px;
+  font-size: 0.8rem;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
 
 .separator {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.5rem;
+  font-weight: 800;
   color: var(--accent);
   font-variant-numeric: tabular-nums;
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
 
 .launchMsg {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--accent);
-  padding: 40px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--btn-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding: 48px;
 }

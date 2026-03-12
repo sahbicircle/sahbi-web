@@ -5,9 +5,12 @@
     "system": "System"
   },
   "nav": {
+    "discover": "Discover",
+    "legal": "Legal",
     "concept": "Concept",
     "pricing": "Pricing",
     "features": "Features",
+    "events": "Events",
     "waitlist": "Waitlist",
     "faq": "FAQ",
     "privacy": "Privacy",
@@ -143,7 +146,25 @@
     }
   },
   "countdown": { "title": "Launch in", "subtitle": "Sahbi mobile app arrives March 2026 in Marrakech", "days": "Days", "hours": "Hours", "minutes": "Minutes", "seconds": "Seconds", "launched": "The app is launched!" },
-  "slides": { "title": "The Sahbi experience in pictures" },
+  "slides": {
+    "title": "The Sahbi experience in pictures",
+    "brunch": "Sunday brunch",
+    "brunchDesc": "5 strangers around a table for a convivial moment",
+    "dinner": "Dinner among strangers",
+    "dinnerDesc": "Meet new people in the best restaurants",
+    "drink": "A drink among strangers",
+    "drinkDesc": "Relaxed evenings for making connections",
+    "marrakech": "Marrakech",
+    "marrakechDesc": "Pilot city · Guéliz, Hivernage, Medina"
+  },
+  "events": {
+    "title": "Upcoming events",
+    "subtitle": "Join real meetups in Marrakech",
+    "brunch": "Brunch",
+    "dinner": "Dinner",
+    "participants": "participants",
+    "join": "Join"
+  },
   "faq": {
     "title": "Frequently asked questions",
     "subtitle": "Everything you need to know about Sahbi",

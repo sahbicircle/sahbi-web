@@ -7,21 +7,9 @@ export default function Concept() {
   const { t } = useTranslation();
 
   const items = [
-    {
-      icon: Heart,
-      key: "promise",
-      text: t("concept.promise"),
-    },
-    {
-      icon: Users,
-      key: "experience",
-      text: t("concept.experience"),
-    },
-    {
-      icon: UtensilsCrossed,
-      key: "meaning",
-      text: t("concept.meaning"),
-    },
+    { icon: Heart, key: "promise", title: "Pas de swipe" },
+    { icon: Users, key: "experience", title: "Groupes curés" },
+    { icon: UtensilsCrossed, key: "meaning", title: "Autour d'une table" },
   ];
 
   return (
@@ -43,15 +31,16 @@ export default function Concept() {
             <motion.div
               key={item.key}
               className={styles.card}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
             >
               <div className={styles.iconWrap}>
-                <item.icon size={24} />
+                <item.icon size={28} />
               </div>
-              <p>{item.text}</p>
+              <h3>{item.title}</h3>
+              <p>{t(`concept.${item.key}`)}</p>
             </motion.div>
           ))}
         </div>

@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../../contexts/ThemeContext";
-import { Sun, Moon, Monitor, Globe, Menu, X } from "lucide-react";
+import { Sun, Moon, Monitor, Globe, Menu, X, ChevronDown } from "lucide-react";
+import Logo from "../Logo/Logo";
 import styles from "./Navbar.module.scss";
 
 const LANGUAGES = [
@@ -19,57 +20,149 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [themeOpen, setThemeOpen] = useState(false);
+  const [discoverOpen, setDiscoverOpen] = useState(false);
+  const [legalOpen, setLegalOpen] = useState(false);
 
   const ThemeIcon = theme === "dark" ? Moon : theme === "light" ? Sun : Monitor;
+
+  const discoverRef = useRef(null);
+  const legalRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        discoverRef.current &&
+        !discoverRef.current.contains(e.target) &&
+        legalRef.current &&
+        !legalRef.current.contains(e.target)
+      ) {
+        setDiscoverOpen(false);
+        setLegalOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
+
+  const discoverItems = isHome
+    ? [
+        { href: "#concept", label: t("nav.concept") },
+        { href: "#pricing", label: t("nav.pricing") },
+        { href: "#features", label: t("nav.features") },
+        { href: "#events", label: t("nav.events") },
+        { href: "#faq", label: t("nav.faq") },
+      ]
+    : [
+        { to: "/#concept", label: t("nav.concept") },
+        { to: "/#pricing", label: t("nav.pricing") },
+        { to: "/#features", label: t("nav.features") },
+        { to: "/#events", label: t("nav.events") },
+        { to: "/#faq", label: t("nav.faq") },
+      ];
+
+  const legalItems = [
+    { to: "/privacy", label: t("nav.privacy") },
+    { to: "/terms", label: t("nav.terms") },
+  ];
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <header className={styles.navbar}>
       <div className={styles.container}>
-        <Link to="/" className={styles.logo}>
-          Sahb<span className={styles.logoDot}>i</span>
-        </Link>
+        <Logo />
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
-          {isHome ? (
-            <>
-              <a href="#concept" onClick={() => setMenuOpen(false)}>
-                {t("nav.concept")}
-              </a>
-              <a href="#pricing" onClick={() => setMenuOpen(false)}>
-                {t("nav.pricing")}
-              </a>
-              <a href="#features" onClick={() => setMenuOpen(false)}>
-                {t("nav.features")}
-              </a>
-              <a href="#waitlist" onClick={() => setMenuOpen(false)}>
+          <div className={styles.navLinks}>
+            <div className={styles.navItem} ref={discoverRef}>
+              <button
+                className={styles.navTrigger}
+                onClick={() => {
+                  setDiscoverOpen(!discoverOpen);
+                  setLegalOpen(false);
+                }}
+                aria-expanded={discoverOpen}
+                aria-haspopup="true"
+              >
+                {t("nav.discover")}
+                <ChevronDown
+                  size={16}
+                  className={`${styles.chevron} ${discoverOpen ? styles.open : ""}`}
+                />
+              </button>
+              <div
+                className={`${styles.submenu} ${discoverOpen ? styles.open : ""}`}
+              >
+                {discoverItems.map((item, i) =>
+                  "href" in item ? (
+                    <a
+                      key={i}
+                      href={item.href}
+                      onClick={() => {
+                        closeMenu();
+                        setDiscoverOpen(false);
+                      }}
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={i}
+                      to={item.to}
+                      onClick={() => {
+                        closeMenu();
+                        setDiscoverOpen(false);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+
+            <div className={styles.navItem} ref={legalRef}>
+              <button
+                className={styles.navTrigger}
+                onClick={() => {
+                  setLegalOpen(!legalOpen);
+                  setDiscoverOpen(false);
+                }}
+                aria-expanded={legalOpen}
+                aria-haspopup="true"
+              >
+                {t("nav.legal")}
+                <ChevronDown
+                  size={16}
+                  className={`${styles.chevron} ${legalOpen ? styles.open : ""}`}
+                />
+              </button>
+              <div className={`${styles.submenu} ${legalOpen ? styles.open : ""}`}>
+                {legalItems.map((item, i) => (
+                  <Link
+                    key={i}
+                    to={item.to}
+                    onClick={() => {
+                      closeMenu();
+                      setLegalOpen(false);
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {isHome ? (
+              <a href="#waitlist" onClick={closeMenu}>
                 {t("nav.waitlist")}
               </a>
-              <a href="#faq" onClick={() => setMenuOpen(false)}>
-                {t("nav.faq")}
-              </a>
-              <Link to="/privacy" onClick={() => setMenuOpen(false)}>
-                {t("nav.privacy")}
-              </Link>
-              <Link to="/terms" onClick={() => setMenuOpen(false)}>
-                {t("nav.terms")}
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link to="/#concept" onClick={() => setMenuOpen(false)}>
-                {t("nav.concept")}
-              </Link>
-              <Link to="/#waitlist" onClick={() => setMenuOpen(false)}>
+            ) : (
+              <Link to="/#waitlist" onClick={closeMenu}>
                 {t("nav.waitlist")}
               </Link>
-              <Link to="/privacy" onClick={() => setMenuOpen(false)}>
-                {t("nav.privacy")}
-              </Link>
-              <Link to="/terms" onClick={() => setMenuOpen(false)}>
-                {t("nav.terms")}
-              </Link>
-            </>
-          )}
+            )}
+          </div>
 
           <div className={styles.actions}>
             <div className={styles.dropdown}>

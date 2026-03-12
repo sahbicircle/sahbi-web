@@ -11,18 +11,9 @@
   text-align: center;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  display: inline-block;
+.logoImg {
   margin-bottom: 12px;
-}
-
-.logoDot {
-  color: var(--accent);
-  font-style: italic;
+  height: 32px;
 }
 
 .tagline {

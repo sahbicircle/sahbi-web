@@ -3,23 +3,26 @@ import { motion } from "framer-motion";
 import { Users, MapPin } from "lucide-react";
 import styles from "./Hero.module.scss";
 
+const HERO_BG =
+  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=85";
+
 export default function Hero() {
   const { t } = useTranslation();
 
   return (
     <section className={styles.hero}>
-      <div className={styles.bgPattern} aria-hidden="true" />
-      <div className={styles.bgOrbs} aria-hidden="true">
-        <span className={styles.orb1} />
-        <span className={styles.orb2} />
-        <span className={styles.orb3} />
-      </div>
+      <div
+        className={styles.bgImage}
+        style={{ backgroundImage: `url(${HERO_BG})` }}
+        aria-hidden="true"
+      />
+      <div className={styles.bgOverlay} aria-hidden="true" />
       <div className={styles.container}>
         <motion.div
           className={styles.content}
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.span
             className={styles.badge}
@@ -27,7 +30,7 @@ export default function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <MapPin size={14} />
+            <MapPin size={16} />
             Marrakech · Mars 2026
           </motion.span>
 
@@ -43,37 +46,18 @@ export default function Hero() {
 
           <motion.div
             className={styles.ctaGroup}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
           >
             <a href="#waitlist" className={styles.cta}>
               {t("hero.cta")}
             </a>
             <span className={styles.ctaHint}>
-              <Users size={18} />
+              <Users size={20} />
               {t("hero.first100")}
             </span>
           </motion.div>
-        </motion.div>
-
-        <motion.div
-          className={styles.visual}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
-          <div className={styles.phoneMockup}>
-            <div className={styles.phoneScreen}>
-              <div className={styles.mockContent}>
-                <div className={styles.mockAvatar} />
-                <div className={styles.mockAvatar} />
-                <div className={styles.mockAvatar} />
-                <div className={styles.mockText}>Brunch Dimanche</div>
-                <div className={styles.mockBtn}>Rejoindre</div>
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

@@ -6,20 +6,24 @@ import styles from "./ImageSlides.module.scss";
 
 const SLIDES = [
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
-    alt: "Restaurant ambiance",
+    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=85",
+    titleKey: "slides.brunch",
+    subtitleKey: "slides.brunchDesc",
   },
   {
-    src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=80",
-    alt: "Group dining",
+    src: "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=1200&q=85",
+    titleKey: "slides.dinner",
+    subtitleKey: "slides.dinnerDesc",
   },
   {
-    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80",
-    alt: "Marrakech",
+    src: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1200&q=85",
+    titleKey: "slides.drink",
+    subtitleKey: "slides.drinkDesc",
   },
   {
-    src: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80",
-    alt: "Brunch",
+    src: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=85",
+    titleKey: "slides.marrakech",
+    subtitleKey: "slides.marrakechDesc",
   },
 ];
 
@@ -65,12 +69,16 @@ export default function ImageSlides() {
               <motion.div
                 key={index}
                 className={styles.slide}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.98 }}
                 transition={{ duration: 0.5 }}
               >
-                <img src={SLIDES[index].src} alt={SLIDES[index].alt} />
+                <img src={SLIDES[index].src} alt="" />
+                <div className={styles.overlay}>
+                  <span className={styles.slideTitle}>{t(SLIDES[index].titleKey)}</span>
+                  <span className={styles.slideSubtitle}>{t(SLIDES[index].subtitleKey)}</span>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>

@@ -5,6 +5,7 @@ import Pricing from "../components/Pricing/Pricing";
 import Features from "../components/Features/Features";
 import Countdown from "../components/Countdown/Countdown";
 import ImageSlides from "../components/ImageSlides/ImageSlides";
+import Events from "../components/Events/Events";
 import Waitlist from "../components/Waitlist/Waitlist";
 import FAQ from "../components/FAQ/FAQ";
 import Feedback from "../components/Feedback/Feedback";
@@ -21,6 +22,7 @@ export default function HomePage() {
         <Concept />
         <Pricing />
         <Features />
+        <Events />
         <Waitlist />
         <FAQ />
         <Feedback />

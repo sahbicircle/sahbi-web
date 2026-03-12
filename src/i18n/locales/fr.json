@@ -5,9 +5,12 @@
     "system": "Système"
   },
   "nav": {
+    "discover": "Découvrir",
+    "legal": "Légal",
     "concept": "Concept",
     "pricing": "Tarifs",
     "features": "Fonctionnalités",
+    "events": "Événements",
     "waitlist": "Liste d'attente",
     "faq": "FAQ",
     "privacy": "Confidentialité",
@@ -173,7 +176,23 @@
     "launched": "L'application est lancée !"
   },
   "slides": {
-    "title": "L'expérience Sahbi en images"
+    "title": "L'expérience Sahbi en images",
+    "brunch": "Brunch du dimanche",
+    "brunchDesc": "5 inconnus autour d'une table pour un moment convivial",
+    "dinner": "Dîner entre inconnus",
+    "dinnerDesc": "Découvrez de nouvelles personnes dans les meilleurs restaurants",
+    "drink": "Un verre entre inconnus",
+    "drinkDesc": "Soirées décontractées pour faire des rencontres",
+    "marrakech": "Marrakech",
+    "marrakechDesc": "Ville pilote · Guéliz, Hivernage, Médina"
+  },
+  "events": {
+    "title": "Prochains événements",
+    "subtitle": "Rejoignez des rencontres réelles à Marrakech",
+    "brunch": "Brunch",
+    "dinner": "Dîner",
+    "participants": "participants",
+    "join": "Rejoindre"
   },
   "faq": {
     "title": "Questions fréquentes",

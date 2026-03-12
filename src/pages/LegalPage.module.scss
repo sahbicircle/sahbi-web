@@ -2,6 +2,8 @@
   min-height: 100vh;
   padding: 120px 0 80px;
   background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -110,4 +112,13 @@ h1 {
 
 body[dir="rtl"] .content section ul {
   padding: 0 20px 0 0;
+}
+
+.contactBlock {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px !important;
+  color: var(--accent) !important;
+  font-weight: 500;
 }
