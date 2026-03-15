@@ -20,49 +20,16 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [themeOpen, setThemeOpen] = useState(false);
-  const [discoverOpen, setDiscoverOpen] = useState(false);
-  const [legalOpen, setLegalOpen] = useState(false);
 
   const ThemeIcon = theme === "dark" ? Moon : theme === "light" ? Sun : Monitor;
 
-  const discoverRef = useRef(null);
-  const legalRef = useRef(null);
-
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      if (
-        discoverRef.current &&
-        !discoverRef.current.contains(e.target) &&
-        legalRef.current &&
-        !legalRef.current.contains(e.target)
-      ) {
-        setDiscoverOpen(false);
-        setLegalOpen(false);
-      }
-    };
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, []);
-
-  const discoverItems = isHome
-    ? [
-        { href: "#concept", label: t("nav.concept") },
-        { href: "#pricing", label: t("nav.pricing") },
-        { href: "#features", label: t("nav.features") },
-        { href: "#events", label: t("nav.events") },
-        { href: "#faq", label: t("nav.faq") },
-      ]
-    : [
-        { to: "/#concept", label: t("nav.concept") },
-        { to: "/#pricing", label: t("nav.pricing") },
-        { to: "/#features", label: t("nav.features") },
-        { to: "/#events", label: t("nav.events") },
-        { to: "/#faq", label: t("nav.faq") },
-      ];
-
-  const legalItems = [
-    { to: "/privacy", label: t("nav.privacy") },
-    { to: "/terms", label: t("nav.terms") },
+  const navItems = [
+    { href: isHome ? "#concept" : "/#concept", label: t("nav.concept") },
+    { href: isHome ? "#pricing" : "/#pricing", label: t("nav.pricing") },
+    { href: isHome ? "#features" : "/#features", label: t("nav.features") },
+    { href: isHome ? "#events" : "/#events", label: t("nav.events") },
+    { href: isHome ? "#faq" : "/#faq", label: t("nav.faq") },
+    { href: isHome ? "#waitlist" : "/#waitlist", label: t("nav.waitlist") },
   ];
 
   const closeMenu = () => setMenuOpen(false);
@@ -74,93 +41,16 @@ export default function Navbar() {
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
           <div className={styles.navLinks}>
-            <div className={styles.navItem} ref={discoverRef}>
-              <button
-                className={styles.navTrigger}
-                onClick={() => {
-                  setDiscoverOpen(!discoverOpen);
-                  setLegalOpen(false);
-                }}
-                aria-expanded={discoverOpen}
-                aria-haspopup="true"
-              >
-                {t("nav.discover")}
-                <ChevronDown
-                  size={16}
-                  className={`${styles.chevron} ${discoverOpen ? styles.open : ""}`}
-                />
-              </button>
-              <div
-                className={`${styles.submenu} ${discoverOpen ? styles.open : ""}`}
-              >
-                {discoverItems.map((item, i) =>
-                  "href" in item ? (
-                    <a
-                      key={i}
-                      href={item.href}
-                      onClick={() => {
-                        closeMenu();
-                        setDiscoverOpen(false);
-                      }}
-                    >
-                      {item.label}
-                    </a>
-                  ) : (
-                    <Link
-                      key={i}
-                      to={item.to}
-                      onClick={() => {
-                        closeMenu();
-                        setDiscoverOpen(false);
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-                  )
-                )}
-              </div>
-            </div>
-
-            <div className={styles.navItem} ref={legalRef}>
-              <button
-                className={styles.navTrigger}
-                onClick={() => {
-                  setLegalOpen(!legalOpen);
-                  setDiscoverOpen(false);
-                }}
-                aria-expanded={legalOpen}
-                aria-haspopup="true"
-              >
-                {t("nav.legal")}
-                <ChevronDown
-                  size={16}
-                  className={`${styles.chevron} ${legalOpen ? styles.open : ""}`}
-                />
-              </button>
-              <div className={`${styles.submenu} ${legalOpen ? styles.open : ""}`}>
-                {legalItems.map((item, i) => (
-                  <Link
-                    key={i}
-                    to={item.to}
-                    onClick={() => {
-                      closeMenu();
-                      setLegalOpen(false);
-                    }}
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {isHome ? (
-              <a href="#waitlist" onClick={closeMenu}>
-                {t("nav.waitlist")}
-              </a>
-            ) : (
-              <Link to="/#waitlist" onClick={closeMenu}>
-                {t("nav.waitlist")}
-              </Link>
+            {navItems.map((item, i) =>
+              "href" in item ? (
+                <a key={i} href={item.href} onClick={closeMenu}>
+                  {item.label}
+                </a>
+              ) : (
+                <Link key={i} to={item.to} onClick={closeMenu}>
+                  {item.label}
+                </Link>
+              )
             )}
           </div>
 
@@ -226,11 +116,19 @@ export default function Navbar() {
             </div>
 
             {isHome ? (
-              <a href="#waitlist" className={styles.cta} onClick={() => setMenuOpen(false)}>
+              <a
+                href="#waitlist"
+                className={styles.cta}
+                onClick={() => setMenuOpen(false)}
+              >
                 {t("nav.joinWaitlist")}
               </a>
             ) : (
-              <Link to="/#waitlist" className={styles.cta} onClick={() => setMenuOpen(false)}>
+              <Link
+                to="/#waitlist"
+                className={styles.cta}
+                onClick={() => setMenuOpen(false)}
+              >
                 {t("nav.joinWaitlist")}
               </Link>
             )}
