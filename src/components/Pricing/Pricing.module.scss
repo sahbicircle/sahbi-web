@@ -1,6 +1,6 @@
 .pricing {
   padding: 120px 0;
-  background: var(--bg-primary);
+  // background: var(--bg-primary);
   position: relative;
   overflow: hidden;
 
@@ -19,8 +19,13 @@
 }
 
 @keyframes pricingFloat {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(25px, -15px); }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(25px, -15px);
+  }
 }
 
 .container {

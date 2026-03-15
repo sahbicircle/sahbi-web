@@ -14,22 +14,22 @@ const LANGUAGES = [
 
 export default function Navbar() {
   const { t, i18n } = useTranslation();
-  const { theme, setTheme } = useTheme();
+  // const { theme, setTheme } = useTheme();
   const location = useLocation();
   const isHome = location.pathname === "/";
   const [menuOpen, setMenuOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [themeOpen, setThemeOpen] = useState(false);
 
-  const ThemeIcon = theme === "dark" ? Moon : theme === "light" ? Sun : Monitor;
+  // const ThemeIcon = theme === "dark" ? Moon : theme === "light" ? Sun : Monitor;
 
   const navItems = [
     { href: isHome ? "#concept" : "/#concept", label: t("nav.concept") },
     { href: isHome ? "#pricing" : "/#pricing", label: t("nav.pricing") },
     { href: isHome ? "#features" : "/#features", label: t("nav.features") },
     { href: isHome ? "#events" : "/#events", label: t("nav.events") },
-    { href: isHome ? "#faq" : "/#faq", label: t("nav.faq") },
     { href: isHome ? "#waitlist" : "/#waitlist", label: t("nav.waitlist") },
+    { href: isHome ? "#faq" : "/#faq", label: t("nav.faq") },
   ];
 
   const closeMenu = () => setMenuOpen(false);
@@ -82,7 +82,7 @@ export default function Navbar() {
               )}
             </div>
 
-            <div className={styles.dropdown}>
+            {/* <div className={styles.dropdown}>
               <button
                 className={styles.iconBtn}
                 onClick={() => setThemeOpen(!themeOpen)}
@@ -113,7 +113,7 @@ export default function Navbar() {
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
 
             {isHome ? (
               <a
