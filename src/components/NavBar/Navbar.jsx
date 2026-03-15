@@ -1,7 +1,10 @@
-import { useState, useRef, useEffect } from "react";
+import {
+  useState,
+  // useRef, useEffect
+} from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "../../contexts/ThemeContext";
+// import { useTheme } from "../../contexts/ThemeContext";
 import { Sun, Moon, Monitor, Globe, Menu, X, ChevronDown } from "lucide-react";
 import Logo from "../Logo/Logo";
 import styles from "./Navbar.module.scss";
