@@ -45,6 +45,7 @@
 }
 
 .badge {
+  margin-right: 10px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -65,7 +66,7 @@ h1 {
   line-height: 1.1;
   letter-spacing: -0.04em;
   margin-bottom: 28px;
-  color: #ffffff !important;
+  color: var(--text-primary);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 

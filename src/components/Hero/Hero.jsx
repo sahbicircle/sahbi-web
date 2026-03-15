@@ -31,10 +31,19 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <MapPin size={16} />
-            Marrakech · Mars 2026
+            Casablanca
+          </motion.span>
+          <motion.span
+            className={styles.badge}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <MapPin size={16} />
+            Marrakech
           </motion.span>
 
-          <h1>
+          <h1 style={{ color: "#fff" }}>
             {t("hero.slogan").split(",")[0]}
             <br />
             <span className={styles.highlight}>
