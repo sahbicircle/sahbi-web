@@ -1,4 +1,3 @@
-import Navbar from "../components/NavBar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Concept from "../components/Concept/Concept";
 import Pricing from "../components/Pricing/Pricing";
@@ -14,7 +13,6 @@ import Footer from "../components/Footer/Footer";
 export default function HomePage() {
   return (
     <>
-      <Navbar />
       <main>
         <Hero />
         <Countdown />
