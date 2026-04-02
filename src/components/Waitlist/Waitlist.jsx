@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Phone, Gift, ChevronDown } from "lucide-react";
+import ProseContent from "../ProseContent/ProseContent";
 import styles from "./Waitlist.module.scss";
 
 const PHONE_PREFIXES = [
@@ -78,7 +79,7 @@ export default function Waitlist() {
         >
           <span className={styles.badge}>
             <Gift size={18} />
-            {t("waitlist.subtitle")}
+            {t("waitlist.badge")}
           </span>
 
           <h2>{t("waitlist.title")}</h2>
@@ -93,7 +94,13 @@ export default function Waitlist() {
               {t("waitlist.success")}
             </motion.p>
           ) : (
-            <form onSubmit={submit} className={styles.form}>
+            <>
+              <ProseContent
+                text={t("waitlist.intro")}
+                variant="center"
+                className={styles.introProse}
+              />
+              <form onSubmit={submit} className={styles.form}>
               <div className={styles.phoneRow}>
                 <div className={styles.prefixWrap} ref={prefixRef}>
                   <button
@@ -149,7 +156,10 @@ export default function Waitlist() {
               <button type="submit" disabled={loading}>
                 {loading ? "..." : t("waitlist.submit")}
               </button>
+              <p className={styles.micro}>{t("waitlist.micro")}</p>
+              <p className={styles.formNote}>{t("waitlist.formNote")}</p>
             </form>
+            </>
           )}
         </motion.div>
       </div>

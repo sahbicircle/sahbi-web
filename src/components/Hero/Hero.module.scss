@@ -79,13 +79,11 @@ $card-radius: 0;
 .topBar {
   position: relative;
   z-index: 9;
-  // display: flex;
-  display: grid;
+  display: flex;
   align-items: center;
-  // justify-content: space-between;
-  gap: 12px;
-  grid-template-columns: 1fr auto 1fr;
-  // flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: nowrap;
 }
 
 .brand {
@@ -101,17 +99,25 @@ $card-radius: 0;
   display: block;
 }
 
-.navPill {
-  display: flex;
+.navCta {
+  display: inline-flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 6px 10px;
-  padding: 8px 14px 8px 10px;
-  border: 1px solid rgba(0, 0, 0, 0.88);
+  justify-content: center;
+  padding: 10px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(10px);
-  max-width: min(640px, 52vw);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: #1a1a1a;
+  background: linear-gradient(90deg, $peach-deep 0%, #fff8f4 100%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(232, 149, 110, 0.35);
+  }
 }
 
 .joinNow {
@@ -150,9 +156,8 @@ $card-radius: 0;
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-shrink: 0;
-  justify-self: end;
 }
 
 .langWrap {
@@ -259,20 +264,6 @@ $card-radius: 0;
   }
 }
 
-.mobileToggle {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.18);
-  color: #fff;
-  cursor: pointer;
-  padding: 0;
-}
-
 .body {
   position: relative;
   z-index: 2;
@@ -299,12 +290,14 @@ $card-radius: 0;
 }
 
 .lead {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
   font-size: clamp(0.95rem, 1.35vw, 1.15rem);
-  line-height: 1.55;
+  line-height: 1.65;
   font-weight: 500;
+  letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.95);
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+  text-wrap: pretty;
 }
 
 .bullets {
@@ -313,13 +306,15 @@ $card-radius: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 
   li {
     position: relative;
     padding-left: 1.1em;
     font-size: clamp(0.9rem, 1.2vw, 1.05rem);
     font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.008em;
     color: #fff;
     text-shadow: 0 1px 10px rgba(0, 0, 0, 0.35);
 
@@ -405,26 +400,6 @@ $card-radius: 0;
   max-width: 320px;
 }
 
-.ctaPrimary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 28px;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #fff;
-  background: linear-gradient(95deg, $blue-mid 0%, $peach-deep 100%);
-  box-shadow: 0 10px 32px rgba(80, 100, 200, 0.35);
-  margin-bottom: 14px;
-  transition: transform 0.2s, box-shadow 0.2s;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 40px rgba(80, 100, 200, 0.42);
-  }
-}
-
 .learnMore {
   display: inline-flex;
   align-items: center;
@@ -450,11 +425,13 @@ $card-radius: 0;
 
 .betaCaption {
   margin: 0;
-  font-size: 0.75rem;
-  line-height: 1.45;
+  font-size: 0.78rem;
+  line-height: 1.55;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.01em;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  text-wrap: pretty;
 }
 
 .ticker {
@@ -509,40 +486,14 @@ $card-radius: 0;
 
 // —— Tablet / mobile ——
 @media (max-width: 1100px) {
-  .navPill {
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 12;
-    max-width: min(360px, calc(100vw - 48px));
+  .card {
+    padding: 8px;
+    min-height: 0px;
+    border-radius: 0px;
+  }
+
+  .topBar {
     flex-direction: column;
-    align-items: stretch;
-    padding: 12px;
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    transition: opacity 0.2s, visibility 0.2s;
-  }
-
-  .navPillOpen {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-  }
-
-  .navLink {
-    padding: 10px 12px;
-    font-size: 0.9rem;
-  }
-
-  .joinNow {
-    text-align: center;
-    justify-content: center;
-  }
-
-  .mobileToggle {
-    display: flex;
   }
 
   .bottomBand {

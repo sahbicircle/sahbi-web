@@ -7,29 +7,29 @@
   "nav": {
     "discover": "Découvrir",
     "legal": "Légal",
-    "concept": "Concept",
+    "concept": "D'abord se rencontrer",
     "pricing": "Tarifs",
-    "features": "Fonctionnalités",
-    "events": "Événements",
-    "waitlist": "Liste d'attente",
+    "features": "Comment ça marche",
+    "events": "Moments",
+    "waitlist": "Accès anticipé",
     "faq": "FAQ",
-    "privacy": "Confidentialité",
-    "terms": "Conditions",
-    "joinWaitlist": "Rejoindre la beta",
-    "back": "Retour"
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "joinWaitlist": "Demander un accès anticipé",
+    "back": "Retour",
+    "home": "Accueil"
   },
   "hero": {
-    "slogan": "Rencontres réelles, souvenirs authentiques.",
-    "subtitle": "Sahbi organise des rencontres de groupe dans les meilleurs restaurants de Marrakech. Pas de swipe. On se rencontre d'abord, on discute ensuite.",
-    "cta": "Rejoindre la beta",
+    "slogan": "De vraies personnes. De vrais moments.",
+    "subtitle": "Sahbi réunit de petits groupes de personnes partageant les mêmes idées pour de vraies rencontres à Marrakech et Casablanca.",
+    "cta": "Demander un accès anticipé",
     "first100": "Premiers 100 gratuits",
     "headline": "Cette appli ne vous laisse pas chatter en premier.",
-    "lead": "Sahbi réunit de petits groupes de personnes partageant les mêmes centres d'intérêt pour de vraies rencontres à Marrakech et Casablanca.",
+    "lead": "Sahbi réunit de petits groupes de personnes partageant les mêmes idées pour de vraies rencontres à Marrakech et Casablanca.",
     "bullet1": "Fini le swipe sans fin.",
     "bullet2": "Fini les textos gênants pendant des semaines.",
     "bullet3": "Juste de vraies personnes, de vrais lieux, de vrais moments.",
-    "ctaPrimary": "Demander un accès anticipé",
-    "learnMore": "En savoir plus",
+    "learnMore": "Voir comment ça marche",
     "betaCaption": "Bêta bientôt au Maroc. Les 100 premiers membres sélectionnés ont l'accès gratuit.",
     "navJoinNow": "Rejoindre",
     "navHowItWorks": "Comment ça marche",
@@ -43,71 +43,139 @@
     "ticker": ".CASABLANCA. .MARRAKESH."
   },
   "concept": {
-    "title": "Le Concept",
-    "subtitle": "L'anti-swipe qui remet l'humain au centre",
-    "promise": "Fini les discussions virtuelles interminables. On se rencontre d'abord, on discute ensuite.",
-    "experience": "Des groupes curés par algorithme (centres d'intérêts, âge) se retrouvent dans des restaurants partenaires pour partager un repas.",
-    "meaning": "Sahbi signifie « mon ami » ou « mon compagnon » en arabe."
+    "title": "D'abord se rencontrer. Discuter ensuite.",
+    "body": "La plupart des applis gardent les gens coincés derrière un écran.\nSahbi fait l'inverse.\nNous réunissons de petits groupes et les amenons à se rencontrer dans la vraie vie, dans des lieux publics choisis,\npour des moments simples qui peuvent devenir de vrais souvenirs.\nParce que les plus belles connexions ne commencent pas par un swipe.\nElles commencent par la présence."
+  },
+  "problem": {
+    "title": "Nous sommes plus connectés que jamais. Pourtant la vraie connexion semble plus difficile que jamais.",
+    "body": "Aujourd'hui, on passe plus de temps à scroller, swiper et écrire, et on se sent pourtant seuls.\n\nLes conversations restent en ligne.\n\nLes projets n'aboutissent pas.\n\nLes nouvelles amitiés se font rares.\n\nSahbi a été créé pour ramener les gens à ce qui compte vraiment : se rencontrer, parler, rire et vivre quelque chose de réel."
+  },
+  "whatSahbi": {
+    "title": "Une nouvelle façon de rencontrer des gens au Maroc.",
+    "body": "Sahbi est une appli sociale qui organise de petites rencontres de groupe dans la vraie vie.\n\nNous aidons à découvrir de nouvelles connexions à travers des sorties partagées : cafés, dîners, promenades, activités et moments de groupe.\n\nCe n'est pas une course à l'attention en ligne.\n\nC'est créer des moments hors ligne."
+  },
+  "howItWorks": {
+    "title": "Comment fonctionne Sahbi",
+    "step1": {
+      "title": "Créez votre profil",
+      "text": "Parlez-nous de votre style, de vos centres d'intérêt et des expériences que vous aimez."
+    },
+    "step2": {
+      "title": "Soyez mis en groupe",
+      "text": "Sahbi vous associe à un petit groupe compatible, en général 5 à 7 personnes."
+    },
+    "step3": {
+      "title": "Rencontrez-vous dans la vraie vie",
+      "text": "Vous rejoignez une rencontre organisée dans un lieu public et vivez un vrai moment avec de vraies personnes."
+    }
+  },
+  "safety": {
+    "title": "Pensé pour la vraie vie. Conçu avec la confiance en tête.",
+    "point1": {
+      "title": "Membres vérifiés",
+      "text": "Les profils passent par une vérification pour garder une communauté authentique."
+    },
+    "point2": {
+      "title": "Lieux publics",
+      "text": "Les rencontres ont lieu dans des lieux publics de confiance."
+    },
+    "point3": {
+      "title": "Petits groupes organisés",
+      "text": "L'expérience est pensée pour être naturelle, confortable et socialement facile."
+    },
+    "point4": {
+      "title": "La qualité plutôt que la quantité",
+      "text": "Nous construisons Sahbi avec soin pour créer la bonne ambiance dès le départ."
+    }
+  },
+  "emotional": {
+    "title": "La vie est trop courte pour ne vivre que sur votre téléphone.",
+    "body": "Certains des plus beaux moments arrivent quand on est vraiment présent.\n\nAutour d'une table.\n\nDans un café.\n\nEn marchant.\n\nDans une conversation simple qui n'était pas censée compter, et qui compte pourtant.\n\nSahbi existe pour faire naître plus de ces moments-là."
+  },
+  "socialProof": {
+    "line": "327 personnes sont déjà sur la liste pour rejoindre Sahbi."
   },
   "pricing": {
-    "title": "Nos Offres",
-    "subtitle": "Un abonnement pour des rencontres authentiques",
+    "title": "Sahbi Club",
+    "subtitle": "Structure tarifaire proposée — prix en MAD.",
     "popular": "Populaire",
     "standard": {
-      "name": "Sahbi Day",
+      "name": "Abonnement Standard",
       "price": "59",
       "currency": "DHS/mois",
-      "tagline": "Le Brunch du Dimanche",
+      "audience": "Étudiants, jeunes diplômés et personnes attentives au budget.",
+      "exclusionNote": "Sans les soirées Premium.",
       "features": [
-        "5 inconnus autour d'une table",
-        "Mixité aléatoire ou thématique",
-        "Socialisation & réseautage",
-        "Repas réglé au restaurant"
+        "RSVP illimités aux Sahbi Day (brunchs, cafés, sorties casual).",
+        "Fonctions de base de l'app (chat, découverte de groupes)."
       ]
     },
     "premium": {
-      "name": "Sahbi Night",
+      "name": "Abonnement Premium",
       "price": "199",
       "currency": "DHS/mois",
-      "tagline": "Soirées exclusives",
+      "audience": "Jeunes actifs (25+), cadres et personnes qui privilégient la sécurité et la qualité.",
       "features": [
-        "Tout l'abonnement Standard",
-        "Vendredi : Girls Night Out",
-        "Samedi : Single & Ready",
-        "Groupes de 6 (parité H/F)"
+        "Tout le Standard + Sahbi Night exclusif & Sahbi Forme.",
+        "RSVP prioritaires & pass invité ou plus-one.",
+        "Badge vérifié & assistance concierge."
+      ]
+    },
+    "payPerEvent": {
+      "name": "Paiement à l'événement (Std)",
+      "price": "~40",
+      "currency": "DHS/événement",
+      "audience": "Curieux, touristes ou participants occasionnels.",
+      "features": [
+        "Accès ponctuel à un événement niveau Standard.",
+        "Pas d'accès communauté ou app en continu."
+      ]
+    },
+    "payPerEventPrem": {
+      "name": "Paiement à l'événement (Prem)",
+      "price": "~90",
+      "currency": "DHS/événement",
+      "audience": "Professionnels qui « testent » ou visiteurs de passage.",
+      "features": [
+        "Accès ponctuel à un événement niveau Premium.",
+        "Sous réserve de sélection / invitation pour l'ambiance."
       ]
     }
   },
   "features": {
-    "title": "L'Expérience Sahbi",
-    "subtitle": "Avant, pendant et après la rencontre",
+    "title": "Comment fonctionne Sahbi",
+    "subtitle": "Pensé pour la vraie vie. Conçu avec la confiance en tête.",
     "onboarding": {
-      "title": "Profil & Onboarding",
-      "desc": "Photos, bio, âge, profession et intérêts pour un matching personnalisé."
+      "title": "Créez votre profil",
+      "desc": "Parlez-nous de votre style, de vos centres d'intérêt et des expériences que vous aimez."
     },
     "booking": {
-      "title": "Réservation intuitive",
-      "desc": "Ville, type de cuisine, gamme de prix. Le lieu est confirmé 24h avant, les participants restent secrets."
+      "title": "Soyez mis en groupe",
+      "desc": "Sahbi vous associe à un petit groupe compatible, en général 5 à 7 personnes."
     },
     "unlock": {
-      "title": "Le Déverrouillage",
-      "desc": "Présence détectée (géolocalisation ou QR). Les profils se révèlent après le repas."
+      "title": "Rencontrez-vous dans la vraie vie",
+      "desc": "Vous rejoignez une rencontre organisée dans un lieu public et vivez un vrai moment avec de vraies personnes."
     },
     "chat": {
-      "title": "Chat de groupe",
-      "desc": "S'ouvre automatiquement après le repas pour continuer à échanger, partager des photos ou organiser une autre sortie."
+      "title": "Membres vérifiés",
+      "desc": "Les profils passent par une vérification pour garder une communauté authentique."
     },
     "trust": {
-      "title": "Trust Score",
-      "desc": "Notation 1 à 5 : ponctualité, politesse, convivialité. Une communauté de qualité."
+      "title": "Lieux publics & petits groupes",
+      "desc": "Les rencontres ont lieu dans des lieux publics de confiance. L'expérience est pensée pour être naturelle, confortable et socialement facile — avec la qualité plutôt que la quantité dès le départ."
     }
   },
   "waitlist": {
-    "title": "Liste d'attente Marrakech",
-    "subtitle": "Les 100 premiers inscrits auront accès à l'application gratuitement pendant la beta.",
+    "badge": "Les 100 premiers utilisateurs sélectionnés ont un accès bêta gratuit.",
+    "title": "Candidater pour rejoindre les premiers membres Sahbi.",
+    "subtitle": "Les 100 premiers inscrits auront accès à l'application gratuitement pendant la bêta.",
+    "intro": "Nous ouvrons l'accès progressivement pour construire la bonne communauté et rendre la première expérience exceptionnelle. Inscrivez-vous sur la liste d'attente pour candidater à l'accès anticipé à la bêta à Marrakech et Casablanca.",
     "placeholder": "Votre numéro de téléphone",
-    "submit": "Rejoindre",
-    "success": "Merci ! Vous faites partie des 100 premiers. Nous vous contacterons pour la beta."
+    "submit": "Demander un accès anticipé",
+    "micro": "Les 100 premiers utilisateurs sélectionnés ont un accès bêta gratuit.",
+    "formNote": "Nous commençons par Marrakech et Casablanca.",
+    "success": "Merci ! Vous faites partie des premiers candidats. Nous vous contacterons pour la bêta."
   },
   "launch": {
     "title": "Lancement Mars 2026",
@@ -185,8 +253,8 @@
     }
   },
   "countdown": {
-    "title": "Lancement dans",
-    "subtitle": "L'application mobile Sahbi arrive en Mars 2026 à Marrakech",
+    "title": "Bêta très bientôt",
+    "subtitle": "Sahbi arrive à Marrakech et Casablanca — restez proches.",
     "days": "Jours",
     "hours": "Heures",
     "minutes": "Minutes",
@@ -194,51 +262,53 @@
     "launched": "L'application est lancée !"
   },
   "slides": {
-    "title": "L'expérience Sahbi en images",
-    "brunch": "Brunch du dimanche",
-    "brunchDesc": "5 inconnus autour d'une table pour un moment convivial",
-    "dinner": "Dîner entre inconnus",
-    "dinnerDesc": "Découvrez de nouvelles personnes dans les meilleurs restaurants",
-    "drink": "Un verre entre inconnus",
-    "drinkDesc": "Soirées décontractées pour faire des rencontres",
-    "marrakech": "Marrakech",
-    "marrakechDesc": "Ville pilote · Guéliz, Hivernage, Médina"
+    "title": "La vie est trop courte pour ne vivre que sur votre téléphone.",
+    "brunch": "Autour d'une table",
+    "brunchDesc": "Certains des plus beaux moments arrivent quand on est vraiment présent.",
+    "dinner": "Dans un café",
+    "dinnerDesc": "Une conversation simple qui n'était pas censée compter, et qui compte pourtant.",
+    "drink": "En marchant",
+    "drinkDesc": "De vraies personnes, de vrais lieux, de vrais moments.",
+    "marrakech": "Au Maroc",
+    "marrakechDesc": "Sahbi existe pour faire naître plus de ces moments-là."
   },
   "events": {
-    "title": "Prochains événements",
-    "subtitle": "Rejoignez des rencontres réelles à Marrakech",
+    "title": "De vraies sorties, de vraies personnes",
+    "subtitle": "Moments partagés dans des cafés, des dîners, des promenades et des expériences de groupe — pas un swipe sans fin.",
     "brunch": "Brunch",
     "dinner": "Dîner",
     "participants": "participants",
-    "join": "Rejoindre"
+    "join": "Demander un accès anticipé"
   },
   "faq": {
-    "title": "Questions fréquentes",
-    "subtitle": "Tout ce que vous devez savoir sur Sahbi",
-    "q1": "Comment fonctionne Sahbi ?",
-    "a1": "Sahbi organise des rencontres de groupe dans des restaurants partenaires. Vous réservez un créneau (brunch dimanche ou soirée weekend), et notre algorithme vous met en relation avec 5 à 6 personnes partageant vos centres d'intérêt. Le lieu est révélé 24h avant, les participants restent secrets jusqu'à la fin du repas.",
-    "q2": "Quelle est la différence entre Sahbi Day et Sahbi Night ?",
-    "a2": "Sahbi Day (59 DHS/mois) donne accès aux brunchs du dimanche avec 5 personnes. Sahbi Night (199 DHS/mois) inclut tout Sahbi Day plus les soirées exclusives : Girls Night Out le vendredi et Single & Ready le samedi avec des groupes de 6 personnes.",
-    "q3": "Comment sont choisis les participants ?",
-    "a3": "Notre algorithme de matching prend en compte vos centres d'intérêt, votre âge et vos préférences pour former des groupes équilibrés et favoriser les échanges naturels. La mixité et la parité sont des critères importants.",
-    "q4": "Le repas est-il inclus dans l'abonnement ?",
-    "a4": "Non. L'abonnement couvre la mise en relation et l'accès au service. Vous réglez votre repas directement au restaurant partenaire selon la carte du lieu.",
-    "q5": "Que se passe-t-il si je ne peux pas venir ?",
-    "a5": "Vous pouvez annuler jusqu'à 24h avant l'événement depuis l'application. Des annulations répétées ou des absences non signalées peuvent affecter votre Trust Score et l'accès au service.",
-    "q6": "Sahbi est-il disponible dans d'autres villes ?",
-    "a6": "Marrakech est notre ville pilote pour le lancement en Mars 2026. L'expansion vers d'autres villes du Maroc est prévue selon le succès du lancement."
+    "title": "Des réponses claires",
+    "subtitle": "Transparence sur la confiance, la sécurité, et ce qu'est Sahbi (et ce que ce n'est pas).",
+    "q1": "Sahbi est une appli de rencontres ?",
+    "a1": "Non. Sahbi, ce sont des petites rencontres de groupe dans la vraie vie, dans des lieux publics — pas des semaines de chat en ligne. D'abord se rencontrer, discuter ensuite.",
+    "q2": "Comment rendez-vous les rencontres sûres et confortables ?",
+    "a2": "Les profils sont vérifiés, les groupes sont petits et organisés, et les rencontres ont lieu dans des lieux publics de confiance. Nous construisons avec soin pour que l'ambiance soit naturelle et facile socialement — notamment pour les femmes.",
+    "q3": "Avec qui serai-je mis en groupe ?",
+    "a3": "Sahbi vous associe à un petit groupe compatible — en général 5 à 7 personnes — selon votre style, vos centres d'intérêt et le type d'expériences que vous aimez.",
+    "q4": "Où ont lieu les rencontres ?",
+    "a4": "Dans des lieux publics choisis : cafés, restaurants, promenades et autres lieux adaptés aux groupes, à Marrakech et Casablanca pendant la bêta.",
+    "q5": "Pourquoi une liste d'attente ?",
+    "a5": "Nous ouvrons l'accès progressivement pour construire la bonne communauté et rendre la première expérience exceptionnelle. Les 100 premiers membres sélectionnés ont l'accès bêta gratuit.",
+    "q6": "Sahbi est-il seulement au Maroc ?",
+    "a6": "Nous commençons par Marrakech et Casablanca. D'autres villes pourront suivre."
   },
   "feedback": {
-    "title": "Votre avis compte",
-    "subtitle": "Partagez vos idées et suggestions pour améliorer Sahbi",
+    "title": "Votre mot compte",
+    "subtitle": "Questions, idées ou retours — nous construisons Sahbi avec la communauté.",
     "name": "Votre nom",
     "email": "Votre email",
-    "message": "Votre message ou suggestion...",
+    "message": "Votre message...",
     "submit": "Envoyer",
-    "success": "Merci pour votre retour ! Nous prenons en compte chaque suggestion."
+    "success": "Merci ! Nous lisons chaque message."
   },
   "footer": {
-    "tagline": "Rencontres réelles, souvenirs authentiques.",
+    "tagline": "De vraies personnes. De vrais moments.",
+    "launchLine": "Bientôt au Maroc.",
+    "instagram": "Instagram",
     "rights": "© 2026 Sahbi. Tous droits réservés."
   }
 }

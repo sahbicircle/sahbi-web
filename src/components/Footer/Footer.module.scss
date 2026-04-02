@@ -19,7 +19,13 @@
 .tagline {
   font-size: 0.95rem;
   color: var(--text-muted);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.launchLine {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
 }
 
 .links {

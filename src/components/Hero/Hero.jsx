@@ -2,15 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion as Motion, AnimatePresence } from "framer-motion";
-import {
-  Play,
-  Facebook,
-  Instagram,
-  Twitter,
-  Globe,
-  Menu,
-  X,
-} from "lucide-react";
+import { Facebook, Instagram, Twitter, Globe } from "lucide-react";
 import styles from "./Hero.module.scss";
 import logoWhite from "../../assets/logo/logo sahbi1.svg";
 
@@ -42,21 +34,8 @@ function TikTokIcon({ size = 20 }) {
 }
 
 export default function Hero() {
-  const location = useLocation();
   const { t, i18n } = useTranslation();
   const [langOpen, setLangOpen] = useState(false);
-  const [mobileNavOpen, setMobileNavOpen] = useState(false);
-
-  const isHome = location.pathname === "/";
-
-  const centerLinks = [
-    { href: isHome ? "#concept" : "/#concept", label: t("nav.concept") },
-    { href: isHome ? "#pricing" : "/#pricing", label: t("nav.pricing") },
-    { href: isHome ? "#features" : "/#features", label: t("nav.features") },
-    { href: isHome ? "#events" : "/#events", label: t("nav.events") },
-    { href: isHome ? "#waitlist" : "/#waitlist", label: t("nav.waitlist") },
-    { href: isHome ? "#faq" : "/#faq", label: t("nav.faq") },
-  ];
 
   const tickerSegment = t("hero.ticker");
 
@@ -75,25 +54,10 @@ export default function Hero() {
                 <img src={logoWhite} alt="Sahbi" className={styles.brandLogo} />
               </Link>
 
-              <nav
-                className={`${styles.navPill} ${
-                  mobileNavOpen ? styles.navPillOpen : ""
-                }`}
-                aria-label="Primary"
-              >
-                {centerLinks.map(({ href, label }) => (
-                  <a
-                    key={label}
-                    href={href}
-                    className={styles.navLink}
-                    onClick={() => setMobileNavOpen(false)}
-                  >
-                    {label}
-                  </a>
-                ))}
-              </nav>
-
               <div className={styles.actions}>
+                <a href="#waitlist" className={styles.navCta}>
+                  {t("nav.joinWaitlist")}
+                </a>
                 <div className={styles.langWrap}>
                   <button
                     type="button"
@@ -130,16 +94,6 @@ export default function Hero() {
                     )}
                   </AnimatePresence>
                 </div>
-
-                <button
-                  type="button"
-                  className={styles.mobileToggle}
-                  onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                  aria-expanded={mobileNavOpen}
-                  aria-label={mobileNavOpen ? "Close menu" : "Menu"}
-                >
-                  {mobileNavOpen ? <X size={22} /> : <Menu size={22} />}
-                </button>
               </div>
             </header>
 
@@ -209,9 +163,6 @@ export default function Hero() {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <a href="#waitlist" className={styles.ctaPrimary}>
-                    {t("hero.ctaPrimary")}
-                  </a>
                   <a href="#concept" className={styles.learnMore}>
                     <span>{t("hero.learnMore")}</span>
                     <span className={styles.learnArrow} aria-hidden>
@@ -240,15 +191,12 @@ export default function Hero() {
         </div>
       </div>
 
-      {(langOpen || mobileNavOpen) && (
+      {langOpen && (
         <button
           type="button"
           className={styles.backdrop}
           aria-label="Close"
-          onClick={() => {
-            setLangOpen(false);
-            setMobileNavOpen(false);
-          }}
+          onClick={() => setLangOpen(false)}
         />
       )}
     </section>
