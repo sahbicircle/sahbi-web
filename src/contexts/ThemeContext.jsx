@@ -5,42 +5,38 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem("sahbi-theme");
+    if (saved === "dark") return "light";
     return saved || "system";
   });
 
-  const resolvedTheme = (() => {
-    if (theme === "system") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-    }
-    return theme;
-  })();
+  // Project requirement: remove `data-theme="dark"` entirely.
+  // We keep the theme state for UI, but force the applied attribute to `light`.
+  const resolvedTheme = "light";
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", resolvedTheme);
-  }, [resolvedTheme]);
+    document.documentElement.setAttribute("data-theme", "light");
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("sahbi-theme", theme);
   }, [theme]);
 
-  useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = () => {
-      if (theme === "system") {
-        document.documentElement.setAttribute(
-          "data-theme",
-          media.matches ? "dark" : "light"
-        );
-      }
-    };
-    media.addEventListener("change", handler);
-    return () => media.removeEventListener("change", handler);
-  }, [theme]);
+  // Clamp any future `dark` selection to `light` so the state stays consistent.
+  const setThemeClamped = (next) => {
+    setTheme((prev) => {
+      const candidate = typeof next === "function" ? next(prev) : next;
+      return candidate === "dark" ? "light" : candidate;
+    });
+  };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, resolvedTheme }}>
+    <ThemeContext.Provider
+      value={{
+        theme,
+        setTheme: setThemeClamped,
+        resolvedTheme,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   );
