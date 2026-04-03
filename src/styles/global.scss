@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Poppins", sans-serif;
   background: radial-gradient(
       circle at 25% 30%,
       rgba(255, 190, 170, 0.35),
@@ -67,7 +67,7 @@ body {
 }
 
 body[dir="rtl"] {
-  font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h1,
@@ -76,7 +76,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sora", "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .container {
