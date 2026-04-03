@@ -41,6 +41,7 @@ export default function Waitlist() {
   const [phone, setPhone] = useState("");
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     function handleClickOutside(e) {
@@ -52,18 +53,40 @@ export default function Waitlist() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  function submit(e) {
+  async function submit(e) {
     e.preventDefault();
+    setError("");
     setLoading(true);
 
     // Full phone: prefix + number (e.g. +212612345678)
     const fullPhone = `${prefix}${phone.replace(/\s/g, "")}`;
 
-    // Simulate API call - replace with actual backend
-    setTimeout(() => {
+    const API_BASE =
+      import.meta.env.VITE_API_URL || "https://sahbi-backend.onrender.com/api";
+
+    try {
+      const res = await fetch(`${API_BASE}/waiting-list`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          phone: fullPhone,
+          source: "landing",
+        }),
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(
+          data?.message || t("waitlist.errorGeneric", "Something went wrong.")
+        );
+      }
+
       setSuccess(true);
+    } catch (err) {
+      setError(err.message || t("waitlist.errorGeneric", "Something went wrong."));
+    } finally {
       setLoading(false);
-    }, 800);
+    }
   }
 
   return (
@@ -156,6 +179,7 @@ export default function Waitlist() {
               <button type="submit" disabled={loading}>
                 {loading ? "..." : t("waitlist.submit")}
               </button>
+              {error && <p className={styles.error}>{error}</p>}
               <p className={styles.micro}>{t("waitlist.micro")}</p>
               <p className={styles.formNote}>{t("waitlist.formNote")}</p>
             </form>
