@@ -166,7 +166,7 @@ export default function Hero() {
                   <a href="#concept" className={styles.learnMore}>
                     <span>{t("hero.learnMore")}</span>
                     <span className={styles.learnArrow} aria-hidden>
-                      ———→
+                      →
                     </span>
                   </a>
                   <p className={styles.betaCaption}>{t("hero.betaCaption")}</p>
